@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+  @apply max-w-6xl mx-auto px-4 py-8;
+}
+
+.card {
+  @apply bg-white rounded-xl shadow-md p-8;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  display: grid;
+  border-radius: 50%;
+  background:
+    linear-gradient(0deg, rgb(0 0 0/50%) 30%, #0000 0 70%, rgb(0 0 0/100%) 0) 50%/8% 100%,
+    linear-gradient(90deg, rgb(0 0 0/25%) 30%, #0000 0 70%, rgb(0 0 0/75%) 0) 50%/100% 8%;
+  background-repeat: no-repeat;
+  animation: l23 1s infinite steps(12);
+}
+
+/* Loader Container */
+.loader-container {
+  position: fixed;
+  /* Fixed position to cover the entire screen */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  /* Full width of the viewport */
+  height: 100vh;
+  /* Full height of the viewport */
+  background: rgba(255, 255, 255, 0.7);
+  /* Light blur effect */
+  display: flex;
+  /* Flexbox to center the loader */
+  justify-content: center;
+  /* Center horizontally */
+  align-items: center;
+  /* Center vertically */
+  z-index: 9999;
+  /* High z-index to stay on top */
+}
+
+/* Loader */
+.loader {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: repeating-conic-gradient(#000 0 90deg, #ccc 0 180deg);
+  animation: l21 1s infinite linear;
+}
+
+@keyframes l21 {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.row{
+  @apply flex flex-wrap px-4 py-8 items-center
+}
+.btn{
+  @apply px-4 py-2 rounded-lg bg-green-600 text-white w-full 
+}
+.product .btn{
+  transition: transform 1s , opacity 1s;
+  opacity: 0;
+  transform: translateY(100%);
+}
+.product:hover .btn{
+  opacity: 1;
+  transform: translateY(0%);
+}
+.CategoryImage{
+  height: 200px;
+  
+
+}
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* Full viewport height */
+}
+.navbar {
+  position: relative;
+  /* or fixed */
+  z-index: 1000;
+  /* higher value to ensure it stays on top */
+}
+
+.slick-slider {
+  z-index: 1;
+  /* lower value to ensure it stays below the navbar */
+}
