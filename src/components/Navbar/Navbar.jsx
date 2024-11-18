@@ -24,7 +24,7 @@ export default function Navbar() {
         <div className="bg-slate-100 fixed top-0 right-0 left-0 flex flex-wrap items-center justify-between w-full p-4">
           <a href="#" className="flex items-center space-x-4">
             <FontAwesomeIcon className="text-green-600 h-[2rem] relative" icon={faCartShopping} />
-            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">FreshCart</span>
+            <span className="self-center text-2xl text-black font-semibold  dark:text-white">FreshCart</span>
             <ul className=" flex-wrap items-center space-x-4 hidden md:flex ml-6 ">
               {userLogin !== null && (
                 <>

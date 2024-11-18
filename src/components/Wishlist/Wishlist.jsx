@@ -55,7 +55,7 @@ export default function Wishlist() {
       <h2 className="text-xl font-semibold text-center text-green-700">Shopping Wishlist</h2>
 
       <table className="w-full my-5 text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-        <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+        <thead className="bg-white  dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
           <tr>
             <th scope="col" className="px-4 py-3">
               <span className="sr-only">Image</span>

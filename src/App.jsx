@@ -2,7 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import {  createHashRouter, RouterProvider } from 'react-router-dom'
 import Home from './components/Home/Home'
 import Register from './components/Register/Register'
 import Layout from './components/Layout/Layout'
@@ -24,6 +24,7 @@ import CheckOut from './components/CheckOut/CheckOut'
 import Orders from './components/Orders/Orders'
 import Wishlist from './components/Wishlist/Wishlist'
 import WishlistContextProvider from './components/WishlistContext/WishlistContext'
+import SelectedDetails from './components/SelectedDetails/SelectedDetails'
 
 
 
@@ -32,20 +33,21 @@ let query=new QueryClient();
 
 
 
-let router = createBrowserRouter([
+let router = createHashRouter([
   {path: '',element: <Layout />,
     children: [
       { index:true, element: <ProtectedRoute><Home /></ProtectedRoute> },
-      { path: 'register', element: <Register /> },
-      { path: 'products', element: <ProtectedRoute><Products /></ProtectedRoute> },
-      { path: 'login', element: <Login /> },
-      { path: 'cart', element: <ProtectedRoute><Cart /></ProtectedRoute> },
-      { path: 'categories', element: <ProtectedRoute><Categories /></ProtectedRoute> },
-      { path: 'brands', element: <ProtectedRoute><Brands /></ProtectedRoute> },
-      { path: 'checkout/:cartId', element: <ProtectedRoute><CheckOut /></ProtectedRoute> },
-      { path: 'allorders', element: <ProtectedRoute><Orders /></ProtectedRoute> },
-      { path: 'wishlist', element: <ProtectedRoute><Wishlist /></ProtectedRoute> },
-      { path: 'productdetails/:id/:category', element: <ProtectedRoute><ProductDetails /></ProtectedRoute> },
+      { path: '/register', element: <Register /> },
+      { path: '/products', element: <ProtectedRoute><Products /></ProtectedRoute> },
+      { path: '/login', element: <Login /> },
+      { path: '/cart', element: <ProtectedRoute><Cart /></ProtectedRoute> },
+      { path: '/categories', element: <ProtectedRoute><Categories /></ProtectedRoute> },
+      { path: '/brands', element: <ProtectedRoute><Brands /></ProtectedRoute> },
+      { path: '/checkout/:cartId', element: <ProtectedRoute><CheckOut /></ProtectedRoute> },
+      { path: '/allorders', element: <ProtectedRoute><Orders /></ProtectedRoute> },
+      { path: '/wishlist', element: <ProtectedRoute><Wishlist /></ProtectedRoute> },
+      { path: '/productdetails/:id/:category', element: <ProtectedRoute><ProductDetails /></ProtectedRoute> },
+      { path: '/selecteddetails/:selectedid', element: <ProtectedRoute><SelectedDetails /></ProtectedRoute> },
       { path: '*', element:<Notfound /> }
     ]
   }
