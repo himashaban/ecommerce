@@ -43,7 +43,7 @@ let router = createHashRouter([
       { path: '/cart', element: <ProtectedRoute><Cart /></ProtectedRoute> },
       { path: '/categories', element: <ProtectedRoute><Categories /></ProtectedRoute> },
       { path: '/brands', element: <ProtectedRoute><Brands /></ProtectedRoute> },
-      { path: '/checkout/:cartId', element: <ProtectedRoute><CheckOut /></ProtectedRoute> },
+      { path: '/CheckOut/:cartId', element: <ProtectedRoute><CheckOut /></ProtectedRoute> },
       { path: '/allorders', element: <ProtectedRoute><Orders /></ProtectedRoute> },
       { path: '/wishlist', element: <ProtectedRoute><Wishlist /></ProtectedRoute> },
       { path: '/productdetails/:id/:category', element: <ProtectedRoute><ProductDetails /></ProtectedRoute> },

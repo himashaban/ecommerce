@@ -144,7 +144,7 @@ export default function Cart() {
           
         </tbody>
       </table>
-      <Link to={"/CheckOut"}>
+      <Link to={`/CheckOut/${cartDetails?._id}`}>
       <button  className='btn w-full bg-green-800 text-white rounded-full hover:bg-green-900'> CheckOut</button>
       </Link>
     </div>

@@ -31,7 +31,7 @@ export default function CheckOut() {
   return (
     <>
       <div className="py-6 max-w-xl mx-auto relative">
-        <h2 className="text-4xl flex text-green-700 font-mono font-bold mb-6">Login Now</h2>
+        <h2 className="text-4xl flex text-green-700 font-mono font-bold mb-6"> add your personal info</h2>
         
         <form onSubmit={formik.handleSubmit}>
           <div className="relative z-0 w-full mb-5 group">
